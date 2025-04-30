@@ -6,7 +6,7 @@ public partial class InvalidUrlException : Exception
 {
     private const string DefaultErrorMessage = "Invalid URL";
     
-    public InvalidUrlException(string message) : base(message) { }
+    public InvalidUrlException(string? message = null) : base(message) { }
 
     public static void ThrowIfInvalid(string address, string message = DefaultErrorMessage)
     {
